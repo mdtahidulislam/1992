@@ -1,0 +1,298 @@
+@media (max-width: 1024px) {
+/* section area */
+.section-area {
+    padding-bottom: 90px;
+}
+.sale-end-area {
+    padding-bottom: 200px;
+}
+/* main menu */
+.main-menu li {
+    margin-right: 30px;
+}
+.search {
+    margin-right: 20px;
+}
+
+}
+
+@media (max-width: 991px) {
+
+/* header top bar*/
+.top-bar-container {
+    justify-content: center;
+}
+.announcement {
+    margin-right: initial;
+}
+/* slider area */
+.slider-content {
+    top: 8%;
+}
+/* girl & boy video area*/
+.lookbook-img {
+    width: 100%;
+}
+/* footer newsletter */
+.newsletter-box {}
+
+.newsletter-box {
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.newsletter-title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    line-height: 55px;
+}
+
+.newsletter-form {
+    margin-bottom: 20px;
+}
+
+.newsletter-form .email {
+    padding: 13px 20px;
+}
+
+.newsletter-form .submit-btn {
+    width: 30%;
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.newsletter-para {
+    line-height: 23px;
+}
+}
+
+@media (max-width: 767px) {
+/* section area */
+.section-area {
+    padding-bottom: 70px;
+}
+/* menu css */
+.main-menu {
+    display: none;
+}
+
+.menu-area-container {
+    padding: 30px 0;
+}
+
+.search-cart {
+    margin-left: auto;
+    margin-right: 20px;
+}
+/* slider area */
+.slider-content {
+    top: 15%;
+}
+.slider-content h1 {
+    font-size: 60px;
+    line-height: 65px;
+}
+
+.slider-bottom-content h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.slider-bottom-content h5 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.slider-bottom-content p {
+    margin-bottom: 10px;
+}
+
+.slider-inner-area .owl-nav .owl-prev i, 
+.slider-inner-area .owl-nav .owl-next i {
+    width: 40px;
+    height: 40px;
+}
+
+.slider-inner-area .owl-nav .owl-next:after {
+    right: -12px;
+}
+
+
+.slider-inner-area .owl-nav .owl-prev:after {
+    left: -12px;
+}
+
+/* girl & boy video area*/
+.lookbook-text {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.girl-video-area .video-box {
+    padding-top: 50px;
+}
+
+.lookbook-title {
+    font-size: 55px;
+    line-height: 70px;
+    margin-bottom: 25px;
+}
+
+.lookbook-para {
+    margin-bottom: 10px;
+}
+
+.go-link {
+    font-size: 20px;
+}
+.girl-video-area .video-box {
+    padding-top: 50px;
+}
+.video-wrapper {
+    margin-bottom: 20px;
+}
+
+.video-campaign {
+    margin-bottom: 10px;
+}
+
+.boy-video-area .video-box {
+    padding-bottom: 50px;
+}
+/* new & hot items area*/
+.product-slider {
+    padding-top: 45px;
+}
+.promo-text {
+	width: 70%;
+}
+.pro-text {
+    padding: 20px 5px 0 5px;
+}
+
+.pro-title h6 {
+    font-size: 13px;
+}
+
+.pro-title h6 a {
+    display: block;
+}
+/* sale end area */
+.sale-end-area {
+    padding-bottom: 120px;
+}
+
+.sale-end-title {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.sale-end-para {
+    margin: 15px 0;
+}
+
+.sale-end-text {
+    bottom: -93px;
+}
+/* footer service */
+.footer-service-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-service-subtitle {
+    margin-bottom: 20px;
+}
+
+/* footer menu */
+.footer-left-menu ul,
+.footer-right-menu ul {
+	justify-content: center;
+}
+.footer-bottom-inner {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.scroll-to-top {
+    order: 3;
+}
+
+.footer-left-menu {
+    margin-bottom: 20px;
+}
+
+.footer-right-menu {
+    margin-bottom: 30px;
+}
+
+/*scroll to top */
+.scroll-to-top a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.scroll-to-top a:after {
+    top: -40px;
+}
+
+}
+
+@media (max-width: 575px) {
+/* slider area*/
+.slider-inner-area .owl-nav .owl-next {
+    right: 0;
+}
+.slider-inner-area .owl-nav .owl-prev {
+    left: 0;
+}
+/* footer service */
+.footer-service {
+    margin-bottom: 40px;
+}
+
+}
+
+
+@media (max-width: 425px) {
+/* header top bar*/
+.announcement {
+    text-align: center;
+}
+.top-bar-credential {
+    justify-content: center;
+}
+
+.lan {
+    margin-right: 10px;
+}
+
+.signin {
+    margin-right: 10px;
+}
+
+.shiping-zone {
+    margin: 0 25px;
+}
+/* slider area */
+.slider-content h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+}
+
+@media (max-width: 375px) {
+/* slider area */
+.slider-content h1 {
+    font-size: 35px;
+    line-height: 40px;
+}
+.slider-content {
+    top: 10%;
+}
+.slider-bottom-content h5 {
+    font-size: 15px;
+    margin-bottom: 3px;
+}	
+}

@@ -22,6 +22,7 @@
     08. Hot items area css
     09. Sale end area css
     10. Footer area css
+    11. sidebar registration
 
 -----------------------------------------------------------------------------------*/
 /*----------------------------------------*/
@@ -147,7 +148,6 @@ hr {
   padding: 0; }
 
 label {
-  color: #f2faff;
   font-size: 14px;
   font-weight: 400; }
 
@@ -257,6 +257,14 @@ label {
   padding-bottom: 120px;
 }
 
+.margin-left {
+  margin-left: auto;
+}
+
+.margin-right {
+  margin-right: auto;
+}
+
 /*----------------------------------------*/
 /*  02. Header area css
 /*----------------------------------------*/
@@ -279,20 +287,30 @@ label {
     flex-wrap: wrap;
     align-items: center;
     border-bottom: 1px solid #E5E5E5;
+    padding: 15px 0;
 }
 
 .top-bar-credential {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
 .locality {
     display: flex;
+    align-items: center;
 }
 
 .locality i {
     margin-right: 7px;
+}
+
+.locality .currency-picker {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 .lan {
@@ -318,6 +336,11 @@ label {
 
 .signin {
     margin-right: 30px;
+    cursor: pointer;
+}
+
+.register {
+  cursor: pointer;
 }
 
 /* main menu */
@@ -364,7 +387,7 @@ label {
 }
 
 .main-menu li > a:before {
-    content: url(../img/menu-hover.png);
+    content: url(https://cdn.shopify.com/s/files/1/0511/3682/3479/files/menu-hover.png?v=1604986437);
     position: absolute;
     top: 20px;
     left: 50%;
@@ -447,7 +470,7 @@ ul.sub-submenu-items li a:before {
 }
 
 ul.sub-submenu-items li a:after {
-    content: url(../img/left-bover.png);
+    content: url(https://cdn.shopify.com/s/files/1/0511/3682/3479/files/left-bover_256x256_crop_center.png?v=1604986437);
     position: absolute;
     right: -2px;
     opacity: 0;
@@ -506,7 +529,7 @@ ul.sub-submenu-items li a:hover:after {
 }
 
 .trend-season:before {
-  content: url(../img/top-white-hover.png);
+  content: url(https://cdn.shopify.com/s/files/1/0511/3682/3479/files/top-white-hover.png?v=1604986437);
   position: absolute;
   top: -20px;
   left: 50%;
@@ -749,8 +772,6 @@ li.mega-menu a:after {
     margin-bottom: 20px;
 }
 
-.owl-nav {}
-
 .slider-inner-area .owl-nav {
     position: absolute;
     width: 100%;
@@ -885,7 +906,6 @@ li.mega-menu a:after {
 .video-wrapper {
     position: relative;
     margin-bottom: 30px;
-    height: 270px;
 }
 
 .video-player {
@@ -966,6 +986,10 @@ li.mega-menu a:after {
 
 .pro-img {
     position: relative;
+}
+
+.pro-img > a {
+    display: flex;
 }
 
 .pro-img:after {
@@ -1089,6 +1113,10 @@ li.mega-menu a:after {
 
 .product-wrapper:hover .product-action-btn a {
   transform: scaleX(1);
+}
+
+.product-wrapper:hover .pro-title a {
+  text-decoration: underline;
 }
 
 /* product slider owl dots css for new items & hot items */
@@ -1414,3 +1442,211 @@ li.mega-menu a:after {
   visibility: visible;
 }
 
+/*----------------------------------------*/
+/*  11. sidebar registration
+/*----------------------------------------*/
+/* inner page css */
+.log-reg-header {
+  padding: 50px 0;
+  margin-bottom: 60px;
+  text-align: center;
+  background: #767676;
+  color: #fff;
+}
+
+.customers-login .formh-eader-title {
+  font-weight: 700;
+}
+
+.customers-login .form-input-wrapper input[type="submit"] {
+  cursor: pointer;
+  width: inherit;
+  font-weight: 600;
+}
+
+a.btn {
+  border-color: #999;
+}
+
+/* siderbar css */
+.side-register{
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  z-index: 500;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+  transform: translateX(350px);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  opacity: 0;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.side-register.open{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+
+.customer-form {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  pointer-events: auto;
+  visibility: hidden;
+  transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1),visibility 500ms cubic-bezier(0.23, 1, 0.32, 1),-webkit-transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.customer-form.is_selected {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.form-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(129,129,129,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.form-input-wrapper {
+  padding: 20px;
+}
+
+
+.form-input-wrapper .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-input-wrapper p {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.form-row span {
+  display: contents;
+}
+
+.form-input-wrapper p a{
+  color: #000000;
+}
+
+.form-input-wrapper label {
+  font-size: 16px;
+}
+
+.form-input-wrapper 
+input[type="text"],
+input[type="email"], 
+input[type="password"],
+input[type="submit"] {
+  height: 40px;
+  width: 100%;
+  box-shadow: none;
+  outline: auto;
+  padding: 0 15px;
+}
+
+.form-input-wrapper 
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.login-here,
+.create-account,
+.rec-pass,
+.back-to-login {
+  cursor: pointer;
+  color: #000000;
+}
+
+/* product page css */
+.single-product-wrapper {
+  padding: 60px 0;
+}
+
+.backto-homepage {
+  margin-bottom: 60px;
+}
+
+.backto-homepage a {
+  font-size: 90%;
+  color: #959595;
+}
+
+.product-thumb__bottom {
+  display: flex;
+  margin: 0 -5px;
+}
+
+.product-thumb__img {
+  width: 25%;
+  padding: 0 5px;
+}
+
+.product-thumb__img a {
+  display: block;
+}
+
+.product-thumb__img a img {
+  width: 100%;
+}
+
+.imgBox img {
+  width: 100%;
+}
+
+.product-thumb__top {
+  margin-bottom: 10px;
+}
+
+.product-purchase input[type=number] {
+  border: 1px solid #ddd;
+  text-align: center;
+  width: 70px;
+}
+
+.product-purchase select, .product-purchase input[type=number], .product-purchase button[type=submit] {
+  height: 60px;
+}
+
+.product-purchase button[type=submit] {
+  background: #252525;
+  color: #fff;
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+}
+
+.product-purchase {
+  margin-top: 30px;
+}
+.slide-thumbnail {
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+}

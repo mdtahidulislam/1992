@@ -1,6 +1,52 @@
 (function ($) {
 	"use strict";
+  $(document).ready(function(){
+    $('.product-thumb__img a').mouseover(function(e){
+      e.preventDefault();
+      $('.imgBox img').attr("src", $(this).attr("href"));
+    })
+  })
 
+/*-------------------------------- 
+          slider carousel
+--------------------------------*/
+const nextIcon = '<i class="fas fa-arrow-right"></i>';
+const prevIcon = '<i class="fas fa-arrow-left"></i>';
+
+$(document).ready(function(){
+  $(".slider-carousel").owlCarousel({
+    loop: true,
+    items: 1,
+    margin:0,
+  	nav: true,
+  	navText: [prevIcon, nextIcon]
+  });
+});
+
+/*------------------------------------ 
+          owl carousel for 
+    new items & hot items section
+-------------------------------------*/
+$(document).ready(function(){
+  $(".product-slider").owlCarousel({
+    loop: true,
+    items: 4,
+    margin:30,
+  	dots: true,
+    responsive: {
+      0: {
+        items:1
+      },
+      767: {
+        items:3,
+        margin:15
+      },
+      991: {
+        items: 4
+      }
+    }
+  });
+});
 
 /*-------------------------------- 
             moble menu
@@ -23,7 +69,6 @@ closeMobileMenu.addEventListener( 'click', ()=> {
 
 // mobile menu dropdown
 megaMenu.forEach( (each)=>{
-  console.log(each.nextElementSibling);
   if ( each.nextElementSibling !== null ) {
     each.addEventListener( 'click', (e)=>{
       e.target.parentElement.classList.toggle('active');
@@ -51,61 +96,78 @@ megaMenu.forEach( (each)=>{
   }
 } );
 
-
 /*-------------------------------- 
-          slider carousel
+    sidebar login registration 
 --------------------------------*/
-const nextIcon = '<i class="fas fa-arrow-right"></i>';
-const prevIcon = '<i class="fas fa-arrow-left"></i>';
-
-$(document).ready(function(){
-  $(".slider-carousel").owlCarousel({
-    loop: true,
-    items: 1,
-    margin:0,
-  	nav: true,
-  	navText: [prevIcon, nextIcon]
-  });
+const signInBtn = document.querySelector('.signin');
+const registerBtn = document.querySelector('.register');
+const regLogCanvas = document.querySelector('.side-register');
+const regCanvas = document.querySelector('#reg-canvas');
+const logCanvas = document.querySelector('#log-canvas');
+const recPassCanvas = document.querySelector('#pass-canvas');
+const loginBtn = document.querySelector('.login-here');
+const createAcntBtn = document.querySelector('.create-account');
+const recPassBtn = document.querySelector('.rec-pass');
+const backLogBtn = document.querySelector('.back-to-login');
+const closeBtn = document.querySelectorAll('.close');
+// open canvas
+registerBtn.addEventListener('click', ()=>{
+  regLogCanvas.classList.add('open');
+})
+// open canvas
+signInBtn.addEventListener('click', ()=>{
+  regLogCanvas.classList.add('open');
+})
+// close canvas
+closeBtn.forEach( each =>{
+  if ( each.nextElementSibling == null) {
+    each.addEventListener( 'click', ()=>{
+      if ( regLogCanvas.classList.contains('open') ) {
+        regLogCanvas.classList.remove('open')
+      } 
+    });
+  }
+});
+// open login form
+loginBtn.addEventListener('click', ()=>{
+  regCanvas.classList.remove('is_selected');
+  logCanvas.classList.add('is_selected');
+});
+// open recover form
+recPassBtn.addEventListener('click', ()=>{
+  recPassCanvas.classList.add('is_selected');
+  logCanvas.classList.remove('is_selected');
+});
+// again open login form
+backLogBtn.addEventListener('click', ()=>{
+  recPassCanvas.classList.remove('is_selected');
+  logCanvas.classList.add('is_selected');
+});
+// open register form
+createAcntBtn.addEventListener('click', ()=>{
+  regCanvas.classList.add('is_selected');
+  logCanvas.classList.remove('is_selected');
 });
 
 
 /*-------------------------------- 
-          video js  
+  inner page login registration 
 --------------------------------*/
-const video = document.querySelector('.video-player');
-const playBtn = document.querySelector('.play-btn');
-playBtn.addEventListener( 'click', (e)=>{
-	video.play();
-	playBtn.style.display = 'none';
-	video.controls = 'true';
-	e.stopPropagation();
-} );
+const login = document.querySelector('.login');
+const recPass = document.querySelector('.password');
+const forgetPassBtn = document.querySelector('.forget-pass');
+const cancelBtn = document.querySelector('.cancel');
 
-
-/*------------------------------------ 
-          owl carousel for 
-    new items & hot items section
--------------------------------------*/
-$(document).ready(function(){
-  $(".product-slider").owlCarousel({
-    loop: true,
-    items: 4,
-    margin:30,
-  	dots: true,
-    responsive: {
-      0: {
-        items:1
-      },
-      767: {
-        items:3,
-        margin:15
-      },
-      991: {
-        items: 4
-      }
-    }
-  });
+forgetPassBtn.addEventListener( 'click', ()=>{
+   recPass.classList.remove('d-none')
+   login.classList.add('d-none')
 });
+
+cancelBtn.addEventListener( 'click', ()=>{
+  recPass.classList.add('d-none')
+  login.classList.remove('d-none')
+});
+
 
 
 

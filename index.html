@@ -1350,7 +1350,84 @@
         </div>
     </footer>
     <!-- end footer area -->
+<div class="side-register">
+    <div class="customer-form" id="reg-canvas">
+    <form method="post" action="/account" id="create_customer" accept-charset="UTF-8" onsubmit="window.Shopify.recaptchaV3.addToken(this, &quot;create_customer&quot;); return false;"><input type="hidden" name="form_type" value="create_customer"><input type="hidden" name="utf8" value="✓">
+        <div class="register-header form-header">
+            <div class="formh-eader-title">Register</div>
+            <i class="fa fa-times close"></i>
+        </div>
+        
+        <div class="form-input-wrapper">
+            <p class="form-row">
+                <label for="first_name">First Name</label>
+                <input type="text" name="customer[first_name]">
+            </p>
+            <p class="form-row">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="customer[first_name]">
+            </p>
+            <p class="form-row">
+                <label for="email">Email</label>
+                <input type="email" name="customer[email]">
+            </p>
+            <p class="form-row">
+                <label for="password">Password</label>
+                <input type="password" name="customer[password]">
+            </p>
+            <p class="form-row">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.
+            </p>
+            <input type="submit" value="Register" class="mb-3 text-uppercase">
+            <p>Already have an account? <span class="login-here">Login here</span></p>
+        </div>
+    </form>
+</div>
 
+    <div class="customer-form is_selected" id="log-canvas">
+    <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8" onsubmit="window.Shopify.recaptchaV3.addToken(this, &quot;customer_login&quot;); return false;"><input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
+        <div class="register-header form-header">
+            <div class="formh-eader-title">Sign In</div>
+            <i class="fa fa-times close"></i>
+        </div>
+        
+        <div class="form-input-wrapper">
+            <p class="form-row">
+                <label for="email">Email</label>
+                <input type="email" name="customer[email]">
+            </p>
+            <p class="form-row">
+                <label for="password">Password</label>
+                <input type="password" name="customer[password]">
+            </p>
+            <input type="submit" value="Sign In" class="mb-3 text-uppercase">
+            <p class="form-row">
+                New customer? <span class="create-account">Create your account</span>
+            </p>
+            <p class="form-row">
+                Lost password? <span class="rec-pass">Recover password</span>
+            </p>
+        </div>
+    </form>
+</div>
+    <div class="customer-form" id="pass-canvas">
+    <form method="post" action="/account" id="create_customer" accept-charset="UTF-8" onsubmit="window.Shopify.recaptchaV3.addToken(this, &quot;create_customer&quot;); return false;"><input type="hidden" name="form_type" value="create_customer"><input type="hidden" name="utf8" value="✓">
+        <div class="pass-header form-header">
+            <div class="formh-eader-title">Recover Password</div>
+            <i class="fa fa-times close"></i>
+        </div>
+        
+        <div class="form-input-wrapper">
+            <p class="form-row">
+                <label for="email">Email</label>
+                <input type="email" name="customer[email]">
+            </p>
+            <input type="submit" value="Reset Password" class="mb-3 text-uppercase"> <br>
+            <p>Remembered your password? <span class="back-to-login">Back to login</span></p>
+        </div>
+    </form>
+</div>
+
+  </div>
     <!-- JS here -->
     <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
